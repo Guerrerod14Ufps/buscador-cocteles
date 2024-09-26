@@ -47,21 +47,32 @@ function mostrarResultados() {
     }
 }
 
-// Función para mostrar los cócteles
 function mostrarCocteles(cocteles, container) {
+    container.innerHTML = ''; // Limpiar los resultados anteriores
     if (cocteles && cocteles.length > 0) {
+        const gridContainer = document.createElement('div');
+        gridContainer.classList.add('grid-container');
+        
         cocteles.forEach(coctel => {
             const coctelDiv = document.createElement('div');
+            coctelDiv.classList.add('grid-item');
+            
+            // Enlazar cada cóctel a la página de detalles
             coctelDiv.innerHTML = `
-                <h3>${coctel.strDrink}</h3>
-                <img src="${coctel.strDrinkThumb}" alt="${coctel.strDrink}" width="100">
+                <a href="detalle.html?id=${coctel.idDrink}">
+                    <h3>${coctel.strDrink}</h3>
+                    <img src="${coctel.strDrinkThumb}" alt="${coctel.strDrink}" width="100">
+                </a>
             `;
-            container.appendChild(coctelDiv);
+            gridContainer.appendChild(coctelDiv);
         });
+
+        container.appendChild(gridContainer);
     } else {
         container.innerHTML = '<p>No se encontraron cócteles para esta búsqueda.</p>';
     }
 }
+
 
 // Llamar a la función para mostrar resultados al cargar la página
 window.onload = mostrarResultados;

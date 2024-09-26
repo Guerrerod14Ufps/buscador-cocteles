@@ -25,3 +25,36 @@ button {
 button:hover {
     background-color: #45a049;
 }
+
+/* Estilo para el contenedor del grid */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Ajuste automático de columnas */
+    gap: 20px; /* Espacio entre las columnas */
+    padding: 20px;
+}
+
+/* Estilo para cada ítem del grid */
+.grid-item {
+    text-align: center;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilo para las imágenes */
+.grid-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+/* Título del cóctel */
+.grid-item h3 {
+    font-size: 1.2em;
+    margin: 0;
+}
+
