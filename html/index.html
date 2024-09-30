@@ -8,7 +8,8 @@
 </head>
 <body>
     <h1>Buscar Bebidas</h1>
-    <form action="#" method="GET" id="searchForm">
+    <div style="display: grid; grid-template-columns: 1fr 1fr;" >   
+    <form action="#" method="GET" id="searchForm" style="align-items: center; width: 33%;">
         <label for="ingrediente">Ingrediente:</label>
         <select id="ingrediente" name="ingrediente">
             <option value="">Cargando ingredientes...</option>
@@ -20,11 +21,14 @@
         </select>
 
         <label for="nombre">Nombre:</label>
-        <input type="text" id="nombre" name="nombre" placeholder="Escribe el nombre de la bebida...">
+        <input type="text" id="nombre" name="nombre" placeholder="Escribe el nombre de la bebida..." style="box-sizing: border-box;">
 
         <button type="submit">Buscar</button>
     </form>
-
+    <div>
+        <img>
+    </div>
+    </div>
     <script src="../js/script.js"></script> <!-- Enlace al archivo JavaScript -->
     <script src="../js/results.js"></script> <!-- Enlace al archivo JavaScript para mostrar los resultados -->
 </body>
